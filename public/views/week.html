@@ -4,9 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/main.css"/>
   <title>Dark Sky API | Week</title>
 </head>
 <body>
-  <h3>Week ;)</h3>
+  <section class="container-fluid overlay bg-dark m-3">
+    <h1 class="text-center text-white pt-3 mb-5">Pronóstico de la Semana</h1>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-white"><strong>MONDAY</strong></p>
+      </div>
+      <div id="monday" class="col-6"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-white"><strong>TUESDAY</strong></p>
+      </div>
+      <div id="tuesday" class="col-6"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-white"><strong>WEDNESDAY</strong></p>
+      </div>
+      <div id="wednesday" class="col-6"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-white"><strong>THURSDAY</strong></p>
+      </div>
+      <div id="thursday" class="col-6"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-white"><strong>FRIDAY</strong></p>
+      </div>
+      <div id="friday" class="col-6"></div>
+    </div>
+  </section>
+  <div class="btn-container text-center">
+    <button id="home-btn" type="button" class="btn btn-light btn-lg mt-5">Go back</button>
+  </div>
+  
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- <script src="../js/app.js"></script> -->
+  <script src="../js/weekly.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dark Sky API | Today</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> 
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body>
+  <main class="p-3">
+    <div class="container">
+      <div class="row mb-3">
+        <h1 class="text-center text-dark col-10 offset-1">Welcome to the Weather Forecast!</h1>
+      </div>
+    </div>
+    <section class="bg-info border rounded overlay">
+      <div class="container">
+        <div class="row my-3">
+          <div class="img-container col-10 offset-4 ">
+              <i class="fas fa-sun fa-3x"></i>              
+          </div>
+          <div class="temperature-container col-10 offset-3">
+            <h3 id="temperature"></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="wind col-6">
+            <p><strong>Wind:</strong></p>
+          </div>
+          <div id="wind" class="col-6"></div>
+        </div>
+        <div class="row">
+          <div class="humidity col-6">
+            <p><strong>Humidity:</strong></p>
+          </div>
+          <div id="humidity" class="col-6"></div>
+        </div>
+        <div class="row">
+          <div class="uv col-6">
+            <p><strong>UV Index:</strong></p>
+          </div>
+          <div id="uv" class="col-6"></div>
+        </div>
+        <div class="row">
+          <div class="pressure col-6">
+            <p><strong>Pressure:</strong></p>
+          </div>
+          <div id="pressure" class="col-6"></div>
+        </div>
+      </div>
+    </section>
+    <div class="btn-container text-center">
+      <button id="week" type="button" class="btn btn-light btn-lg mt-5">Weekly Forecast</button>
+    </div>
+  </main>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="../js/daily.js"></script>
+</body>
+</html>

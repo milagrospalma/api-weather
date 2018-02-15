@@ -4,13 +4,20 @@ body {
   background-repeat: no-repeat; */
   background-color: rgb(244, 245, 170);
   height: 100vh;
-}
-
-main {
-  padding: 4em 2em;
+  font-family: 'Bree Serif', serif;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0,0.4);
-  height: 50vh;
+  height: 75vh;
+}
+
+#master-row {
+ margin-top: 70%;
+}
+
+@media (min-width: 768px) {
+  #master-row {
+    margin-top: 20%;
+   }
+   
 }
