@@ -1,4 +1,5 @@
-window.addEventListener('load', function () {
+$(document).ready(function() {
+  // declarando variables
   var icon = document.getElementById('icon');
   var temperature = document.getElementById('temperature');
   var wind = document.getElementById('wind');
@@ -7,8 +8,10 @@ window.addEventListener('load', function () {
   var pressure = document.getElementById('pressure');
   var btnWeek = document.getElementById('week');
 
+  // llamando funciones
   findLocation();
 
+  // creando funciones
   function findLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -20,25 +23,32 @@ window.addEventListener('load', function () {
         console.log(location.lng);
         var proxy = 'https://cors-anywhere.herokuapp.com/';
         var apiDarkSky = `https://api.darksky.net/forecast/830e41c8feba04c962c6384dfe3958ec/${location.lat},${location.lng}`;
-        // console.log(apiDarkSky);
-
-        //   $.ajax({
-        //     url: proxy + apiLinkDS,
-        //     success: function(data) { // -> llamar a la función showWeather
-        //       console.log('hola'); 
-        //     }
-        //   });
+        console.log(apiDarkSky);
+        $.ajax({
+          url: proxy + apiDarkSky,
+          success: getWeather
+        });
       });
     } else {
-      console.log('error');
+      console.log('something went wrong');
     }
   }
 
-  function showWeather(data) {
-    // trabajar la data
-  }
+  function getWeather(data) {
+    console.log(data);
+    console.log(data.currently.windSpeed);
+    var windForecast = data.currently.windSpeed;
+    var humidityForecast = data.currently.humidity;
+    var uvForecast = data.currently.uvIndex;
+    var pressureForecast = data.currently.pressure;
 
-  btnWeek.addEventListener('click', function() {
-    window.location.href = 'views/week.html';
-  });
+    wind.innerHTML = (`<p>${windForecast}</p>`);
+    humidity.innerHTML = (`<p>${humidityForecast}</p>`);
+    uv.innerHTML = (`<p>${uvForecast}</p>`);
+    pressure.innerHTML = (`<p>${pressureForecast}</p>`);
+  };
 });
+
+// btnWeek.addEventListener('click', function() {
+//   window.location.href = 'views/week.html';
+// });
