@@ -1,6 +1,17 @@
 # WEATHER
 
-> Recuerda seguir siempre esta [guía de estilos](https://github.com/Laboratoria/js-style-guide/)
+### Trabajo Práctico sobre obtención de datos de una API.
 
-¿Has visto que los sistemas operativos móviles vienen con una APP de predicción del clima? ¡Vamos a hacer la nuestra! Para ello, usaremos la API de Dark Sky y esperemos llegues a usar un API de imágenes como Flickr, Unsplash u otro. A continuación te dejamos unos slides con algunos recursos y guías del flujo de la app. Recuerda que no es necesario que sigas el diseño al pie de la letra, eres completamente libre de adaptarlo a tus gustos.
+* La API _**Dark Sky**_ maneja información sobre el clima.
 
+* En la primera vista se nos dan los datos del clima según nuestra ubicación.
+
+* En la segunda vista se está implementando la visualización del clima de la semana (7 días próximos).
+
+* Vista del proyecto:
+
+![Sin titulo](public/assets/images/splash.png) 
+
+![Sin titulo](public/assets/images/mobile.JPG)
+
+* En desarrollo por: Milagros Palma y Lucero Hospina.
