@@ -26,8 +26,8 @@ $(document).ready(function() {
         console.log(location.lat);
         console.log(location.lng);
         var proxy = 'https://cors-anywhere.herokuapp.com/';
-        var apiDarkSky = `https://api.darksky.net/forecast/830e41c8feba04c962c6384dfe3958ec/${location.lat},${location.lng}`;
-        console.log(apiDarkSky);
+        var apiDarkSky = `https://api.darksky.net/forecast/830e41c8feba04c962c6384dfe3958ec/${location.lat},${location.lng}?exclude=daily,hourly,flags`;
+        // console.log(apiDarkSky);
         $.ajax({
           url: proxy + apiDarkSky,
           success: getWeather
@@ -39,8 +39,8 @@ $(document).ready(function() {
   }
 
   function getWeather(data) {
-    console.log(data);
-    console.log(data.currently.windSpeed);
+    // console.log(data);
+    // console.log(data.currently.windSpeed);
     var temperatureForecast = (data.currently.temperature).toFixed(2);
     var windForecast = (data.currently.windSpeed).toFixed(2);
     var humidityForecast = (data.currently.humidity * 100).toFixed(0);

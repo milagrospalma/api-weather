@@ -1,4 +1,4 @@
-# WEATHER
+# API WEATHER: Dark Sky
 
 ### Trabajo Práctico sobre obtención de datos de una API.
 
@@ -13,5 +13,7 @@
 ![Sin titulo](public/assets/images/splash.png) 
 
 ![Sin titulo](public/assets/images/mobile.JPG)
+
+![Sin titulo](public/assets/images/weekly.JPG)
 
 * En desarrollo por: Milagros Palma y Lucero Hospina.

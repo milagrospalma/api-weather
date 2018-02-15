@@ -2,21 +2,41 @@ body {
   /* background-image: url();
   background-position: center;
   background-repeat: no-repeat; */
-  background-color: rgb(244, 245, 170);
-  height: 100vh;
+  /* background-color: rgb(244, 245, 170); */
+  /* height: 100vh; */
   font-family: 'Bree Serif', serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .overlay {
-  height: 50vh;
+  height: 100vh;
+  background-image: url('../assets/images/clouds-bg.jpg');
+  background-position: center center;
+  background-size: cover cover;
+  background-repeat: no-repeat;
 }
 
 #master-row {
  margin-top: 70%;
 }
 
+.subtitles {
+  font-size: 1.2em;
+}
+
 @media (min-width: 768px) {
   #master-row {
     margin-top: 20%;
    }
+  .subtitles {
+    font-size: 3em;
+  }
 }
