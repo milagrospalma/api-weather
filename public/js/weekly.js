@@ -5,10 +5,9 @@ $(document).ready(function() {
   // llamando funciones
   findLocation();
   btnHome.addEventListener('click', function() {
-    window.location.href = '../index.html';
+    window.location.href = '../views/day.html';
   });
   
-
   // creando funciones
   function findLocation() {
     if (navigator.geolocation) {
@@ -31,12 +30,10 @@ $(document).ready(function() {
       console.log('something went wrong');
     }
   }
-
   function getWeather(data) {
     console.log(data.daily.data.length);
     for (i = 0; i < data.daily.data.length; i++) {
       console.log(data.daily.data[i]);
-      
     }
   }
 });
