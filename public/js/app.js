@@ -10,6 +10,10 @@ $(document).ready(function() {
 
   // llamando funciones
   findLocation();
+  btnWeek.addEventListener('click', function() {
+    window.location.href = 'views/week.html';
+  });
+  
 
   // creando funciones
   function findLocation() {
@@ -37,18 +41,17 @@ $(document).ready(function() {
   function getWeather(data) {
     console.log(data);
     console.log(data.currently.windSpeed);
-    var windForecast = data.currently.windSpeed;
-    var humidityForecast = data.currently.humidity;
+    var temperatureForecast = (data.currently.temperature).toFixed(2);
+    var windForecast = (data.currently.windSpeed).toFixed(2);
+    var humidityForecast = (data.currently.humidity * 100).toFixed(0);
     var uvForecast = data.currently.uvIndex;
-    var pressureForecast = data.currently.pressure;
+    var pressureForecast = (data.currently.pressure / 100).toFixed(2);
 
-    wind.innerHTML = (`<p>${windForecast}</p>`);
-    humidity.innerHTML = (`<p>${humidityForecast}</p>`);
+    temperature.innerHTML = (`<p>${temperatureForecast}°</p>`);
+    wind.innerHTML = (`<p>${windForecast} m/h</p>`);
+    humidity.innerHTML = (`<p>${humidityForecast}%</p>`);
     uv.innerHTML = (`<p>${uvForecast}</p>`);
-    pressure.innerHTML = (`<p>${pressureForecast}</p>`);
+    pressure.innerHTML = (`<p>${pressureForecast}%</p>`);
   };
 });
 
-// btnWeek.addEventListener('click', function() {
-//   window.location.href = 'views/week.html';
-// });
