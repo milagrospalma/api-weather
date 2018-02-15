@@ -7,9 +7,14 @@ body {
   font-family: 'Bree Serif', serif;
 }
 
-/* .overlay {
-  height: 50vh;
-} */
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
 
 .overlay {
   height: 100vh;

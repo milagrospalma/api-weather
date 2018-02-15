@@ -14,4 +14,6 @@
 
 ![Sin titulo](public/assets/images/mobile.JPG)
 
+![Sin titulo](public/assets/images/weekly.JPG)
+
 * En desarrollo por: Milagros Palma y Lucero Hospina.
